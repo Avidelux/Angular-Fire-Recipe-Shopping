@@ -1,2 +1,3 @@
 /// Basic file to document all import and npm-installations 
 ng update @angular/cli @angular/core --force
+npm install --save @angular/material @angular/cdk @angular/animations
