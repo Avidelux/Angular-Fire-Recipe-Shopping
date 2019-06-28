@@ -1,3 +1,7 @@
+
+/// This module will be used to import all stuff related to Angular Material
+// New imports will be handled here, the AppModule will remain untouched then
+
 // General imports
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,8 +19,5 @@ import { MatButtonModule } from '@angular/material';
     MatButtonModule
   ]
 })
-
-/// This module will be used to import all stuff related to Angular Material
-// New imports will be handled here, the AppModule will remain untouched then
 
 export class AppMaterialModule { }
