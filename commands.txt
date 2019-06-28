@@ -1,0 +1,2 @@
+/// Basic file to document all import and npm-installations 
+ng update @angular/cli @angular/core --force
