@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular-Fire-Rezeptbuch';
+  title = 'Angular-Fire-Recipe-Shopping';
 }

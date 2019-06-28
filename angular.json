@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular-Fire-Rezeptbuch": {
+    "Angular-Fire-Recipe-Shopping": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Angular-Fire-Rezeptbuch",
+            "outputPath": "dist/Angular-Fire-Recipe-Shopping",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Angular-Fire-Rezeptbuch:build"
+            "browserTarget": "Angular-Fire-Recipe-Shopping:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Angular-Fire-Rezeptbuch:build:production"
+              "browserTarget": "Angular-Fire-Recipe-Shopping:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Angular-Fire-Rezeptbuch:build"
+            "browserTarget": "Angular-Fire-Recipe-Shopping:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "Angular-Fire-Rezeptbuch-e2e": {
+    "Angular-Fire-Recipe-Shopping-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Angular-Fire-Rezeptbuch:serve"
+            "devServerTarget": "Angular-Fire-Recipe-Shopping:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Angular-Fire-Rezeptbuch:serve:production"
+              "devServerTarget": "Angular-Fire-Recipe-Shopping:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "Angular-Fire-Rezeptbuch"
+  "defaultProject": "Angular-Fire-Recipe-Shopping"
 }
