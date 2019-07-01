@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeDetailviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(  ) { }
 
   ngOnInit() {
+   
   }
 
 }
