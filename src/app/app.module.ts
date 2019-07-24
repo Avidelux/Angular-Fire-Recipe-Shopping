@@ -8,6 +8,7 @@ import { RecipeDetailviewComponent } from './recipe-detailview/recipe-detailview
 import { AppRoutingModule } from './app-routing.module';
 import { EntryComponent } from './entry/entry.component';
 import { HeaderComponent } from './header/header.component';
+import { IngredientDetailviewComponent } from './ingredient-detailview/ingredient-detailview.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
     RecipeMasterviewComponent,
     RecipeDetailviewComponent,
     EntryComponent,
-    HeaderComponent
+    HeaderComponent,
+    IngredientDetailviewComponent
   ],
   imports: [
     BrowserModule,

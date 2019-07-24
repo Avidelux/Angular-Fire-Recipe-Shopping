@@ -1,4 +1,8 @@
 <p>recipe-detailview works!</p>
 <div>
-    <p> {{ recipe[(recipeID-1)].name }} </p>
+    <p> {{ reci.name }} </p>
 </div>
+
+<ul *ngFor="let pro of reci.products">
+    <li>{{ pro }}</li>
+</ul>

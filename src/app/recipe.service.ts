@@ -2,9 +2,12 @@ import { Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Observable, of } from 'rxjs';
 
-const recipeArray = [ { id:'1', name: 'recipe1', products: ['product1', 'product2'] }, 
-      { id:'2', name: 'recipe2', products: ['product2', 'product3'] } 
-]
+const ingredientArray = ['ingredient1', 'ingredient2', 'ingredient3', 'ingredient4', 'ingredient5', 'ingredient6'];
+
+const recipeArray = [ 
+    { id:'1', name: 'recipe1', products: [ ingredientArray[0], ingredientArray[3] ] }, 
+    { id:'2', name: 'recipe2', products: [ ingredientArray[1], ingredientArray[2] ] } 
+];
 
 @Injectable({
   providedIn: 'root'

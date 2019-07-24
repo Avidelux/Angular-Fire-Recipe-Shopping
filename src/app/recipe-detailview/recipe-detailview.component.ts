@@ -12,13 +12,16 @@ export class RecipeDetailviewComponent implements OnInit {
 
   recipeID;
   recipe:Recipe[];
+  reci:Recipe;
 
   constructor( private service: RecipeService, private route: ActivatedRoute ) { }
 
   ngOnInit() {
     this.getID();
     this.service.getRecipes().subscribe(element => this.recipe = element); //get observable from recipe-service
-   
+    this.reci = this.recipe[(this.recipeID-1)]; //pulls out just the recipe that is needed 
+    
+    /// to-do: redundancy of recipe[] with recipe-masterview, fix!
   }
 
   getID(){
