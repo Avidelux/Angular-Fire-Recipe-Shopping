@@ -11,11 +11,9 @@ const recipeArray = [ { id:'1', name: 'recipe1', products: ['product1', 'product
 })
 export class RecipeService {
 
-  
-
   constructor() { }
 
-  getRecipes(): Observable<Recipe []>{
+  getRecipes(): Observable<Recipe[]>{
     return of(recipeArray);
   }
 

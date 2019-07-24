@@ -6,12 +6,16 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { RecipeMasterviewComponent } from './recipe-masterview/recipe-masterview.component';
 import { RecipeDetailviewComponent } from './recipe-detailview/recipe-detailview.component';
 import { AppRoutingModule } from './app-routing.module';
+import { EntryComponent } from './entry/entry.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeMasterviewComponent,
-    RecipeDetailviewComponent
+    RecipeDetailviewComponent,
+    EntryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -11,14 +11,14 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailviewComponent implements OnInit {
 
   recipeID;
-  recipe:Recipe [] ;
+  recipe:Recipe[];
 
   constructor( private service: RecipeService, private route: ActivatedRoute ) { }
 
   ngOnInit() {
-   this.getID();
-    this.service.getRecipes().subscribe(element => this.recipe = element);
-   //setTimeout( () => { this.getRecipeFromService() }, 2000);
+    this.getID();
+    this.service.getRecipes().subscribe(element => this.recipe = element); //get observable from recipe-service
+   
   }
 
   getID(){
@@ -29,6 +29,8 @@ export class RecipeDetailviewComponent implements OnInit {
   }
 
   getRecipeFromService(){
+    
+    
     /*
     if(this.recipeID != null){
       console.log(this.service.getByID(this.recipeID));

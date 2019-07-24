@@ -8,15 +8,22 @@ import { CommonModule } from '@angular/common';
 
 // Material related imports
 import { MatButtonModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatGridListModule
   ],
   exports: [
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatGridListModule
   ]
 })
 
