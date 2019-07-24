@@ -5,7 +5,7 @@ import { RecipeDetailviewComponent } from './recipe-detailview/recipe-detailview
 
 const routes: Routes = [
   {path: '', component: RecipeMasterviewComponent},
-  {path: 'recipe', component: RecipeDetailviewComponent}
+  {path: 'recipe/:id', component: RecipeDetailviewComponent}
 ];
 
 @NgModule({

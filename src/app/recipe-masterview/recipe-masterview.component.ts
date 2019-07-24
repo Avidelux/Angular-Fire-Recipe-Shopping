@@ -14,7 +14,7 @@ export class RecipeMasterviewComponent implements OnInit {
 
   ngOnInit() {
 
-    this.recipes = this.service.getRecipes()
+    this.service.getRecipes().subscribe(element => this.recipes = element);
       
     console.log(this.recipes);
     
