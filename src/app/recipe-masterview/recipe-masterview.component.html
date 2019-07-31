@@ -1,7 +1,5 @@
-<p>recipe-masterview works!</p>
-<li *ngFor="let recipe of recipes">
-    {{ recipe.name }}
-    --------
-    {{ recipe.products }}
-    <a [routerLink]="['/recipe', recipe.id]"> here </a>
-  </li>
+
+<mat-grid-list cols="4" rowHeight="1:1" >
+    <mat-grid-tile-header> <p>Check out these recipes!</p> </mat-grid-tile-header>
+    <mat-grid-tile *ngFor="let recipe of recipes"> {{ recipe.name }} <img src="https://loremflickr.com/150/150" alt="placeholder"> <a [routerLink]="['/recipe', recipe.id]"> here </a> </mat-grid-tile>
+</mat-grid-list>

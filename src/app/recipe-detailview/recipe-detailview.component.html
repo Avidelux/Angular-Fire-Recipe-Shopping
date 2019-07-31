@@ -1,8 +1,9 @@
-<p>recipe-detailview works!</p>
-<div>
-    <p> {{ reci.name }} </p>
-</div>
 
-<ul *ngFor="let pro of reci.products">
-    <li>{{ pro }}</li>
-</ul>
+<mat-grid-list cols="2" rowHeight="3:1" >
+    <mat-grid-tile-header> <p> {{ reci.name }} </p> <img src="https://loremflickr.com/450/300" alt="placeholder"> </mat-grid-tile-header>
+    <mat-grid-tile *ngFor="let pro of reci.products"> {{ pro }} <img src="https://loremflickr.com/150/150" alt="placeholder"> </mat-grid-tile>
+</mat-grid-list>
+
+<div>
+    <p>Back to recipe-masterview: <a [routerLink]="['/recipe']"> [-] </a> </p>
+</div>

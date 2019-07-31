@@ -6,7 +6,9 @@ const ingredientArray = ['ingredient1', 'ingredient2', 'ingredient3', 'ingredien
 
 const recipeArray = [ 
     { id:'1', name: 'recipe1', products: [ ingredientArray[0], ingredientArray[3] ] }, 
-    { id:'2', name: 'recipe2', products: [ ingredientArray[1], ingredientArray[2] ] } 
+    { id:'2', name: 'recipe2', products: [ ingredientArray[1], ingredientArray[2] ] },
+    { id:'3', name: 'recipe3', products: [ ingredientArray[2], ingredientArray[5] ] },
+    { id:'4', name: 'recipe4', products: [ ingredientArray[3], ingredientArray[4] ] }
 ];
 
 @Injectable({
