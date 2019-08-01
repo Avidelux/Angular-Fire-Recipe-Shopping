@@ -1,5 +1,13 @@
 
 <mat-grid-list cols="4" rowHeight="1:1" >
     <mat-grid-tile-header> <p>Check out these recipes!</p> </mat-grid-tile-header>
-    <mat-grid-tile *ngFor="let recipe of recipes"> {{ recipe.name }} <img src="https://loremflickr.com/150/150" alt="placeholder"> <a [routerLink]="['/recipe', recipe.id]"> here </a> </mat-grid-tile>
+    <mat-grid-tile *ngFor="let recipe of recipes"> 
+        <mat-card>
+            <mat-card-title> {{ recipe.name }} </mat-card-title>
+            <img mat-card-image *ngIf="recipe.image!=null" [src]= recipe.image alt="placeholder">
+            <mat-card-actions>
+                <button mat-button [routerLink]="['/recipe', recipe.id]">Check this recipe</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
 </mat-grid-list>

@@ -1,7 +1,30 @@
 
 <mat-grid-list cols="2" rowHeight="3:1" >
-    <mat-grid-tile-header> <p> {{ reci.name }} </p> <img src="https://loremflickr.com/450/300" alt="placeholder"> </mat-grid-tile-header>
-    <mat-grid-tile *ngFor="let pro of reci.products"> {{ pro }} <img src="https://loremflickr.com/150/150" alt="placeholder"> </mat-grid-tile>
+    <mat-grid-tile-header> <p> {{ reci.name }} </p> </mat-grid-tile-header>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>Zutaten</mat-card-title>
+            <mat-card-content>
+                <ul *ngFor="let pro of reci.products">
+                    <li>{{ pro.name }} | {{ pro.category }}</li>
+                </ul>
+            </mat-card-content>
+        </mat-card>    
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspan="2">
+        <mat-card>
+            <img mat-card-image *ngIf="reci.image!=null" [src]= reci.image alt="placeholder">
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>Schritte</mat-card-title>
+        </mat-card>    
+    </mat-grid-tile>
+    
 </mat-grid-list>
 
 <div>
