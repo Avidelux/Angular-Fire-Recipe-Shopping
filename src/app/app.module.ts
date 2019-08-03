@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EntryComponent } from './entry/entry.component';
 import { HeaderComponent } from './header/header.component';
 import { IngredientDetailviewComponent } from './ingredient-detailview/ingredient-detailview.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IngredientDetailviewComponent } from './ingredient-detailview/ingredien
     RecipeDetailviewComponent,
     EntryComponent,
     HeaderComponent,
-    IngredientDetailviewComponent
+    IngredientDetailviewComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

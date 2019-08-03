@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { ActivatedRoute } from '@angular/router';
 import { Recipe } from '../recipe.model';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-recipe-detailview',
@@ -14,11 +15,11 @@ export class RecipeDetailviewComponent implements OnInit {
   recipe:Recipe[];
   reci:Recipe;
 
-  constructor( private service: RecipeService, private route: ActivatedRoute ) { }
+  constructor( private recService: RecipeService, private route: ActivatedRoute, private cartService: ShoppingCartService ) { }
 
   ngOnInit() {
     this.getID();
-    this.service.getRecipes().subscribe(element => this.recipe = element); //get observable from recipe-service
+    this.recService.getRecipes().subscribe(element => this.recipe = element); //get observable from recipe-service
     this.reci = this.recipe[(this.recipeID-1)]; //pulls out just the recipe that is needed 
     
     /// to-do: redundancy of recipe[] with recipe-masterview, fix!
@@ -30,6 +31,17 @@ export class RecipeDetailviewComponent implements OnInit {
 
     console.log(this.recipeID);
   }
+
+  addToCart() {
+    this.reci.products.forEach(element => {
+      this.cartService.addItem(element);
+    });
+   
+  }
+
+
+
+
 
   getRecipeFromService(){
     

@@ -5,3 +5,13 @@ mat-grid-tile-header{
     margin-right: auto;
     width: 50%;
 }
+mat-grid-tile{
+    text-align: left;
+    display: block;
+    background-color: aqua;
+}
+
+
+ul{
+    list-style: none;
+}

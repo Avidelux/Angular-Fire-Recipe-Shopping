@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../recipe.service';
+import { Recipe } from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-masterview',
@@ -13,12 +14,12 @@ export class RecipeMasterviewComponent implements OnInit {
   constructor( private service: RecipeService ) { }
 
   ngOnInit() {
-
     this.service.getRecipes().subscribe(element => this.recipes = element);
-      
-    console.log(this.recipes);
-    
-    
   }
+
+  addRecipe(rec: Recipe){
+    this.service.recipeArray.push(rec);
+  }
+
 
 }

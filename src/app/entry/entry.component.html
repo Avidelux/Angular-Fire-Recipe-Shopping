@@ -1,5 +1,18 @@
 <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>Your Shopping Cart</mat-grid-tile>
-    <mat-grid-tile>Browse all recipes <button><a routerLink="/recipe/">Recipe-Masterview</a></button>
+    <mat-grid-tile> 
+        <mat-card>
+            <mat-card-title>Your Shopping Cart</mat-card-title>
+            <mat-card-content>
+                <button><a routerLink="/shopping-cart">Shopping Cart</a></button>
+            </mat-card-content>
+        </mat-card>
     </mat-grid-tile>
-  </mat-grid-list>
+    <mat-grid-tile> 
+        <mat-card>
+            <mat-card-title>Browse all recipes</mat-card-title>
+            <mat-card-content>
+                <button><a routerLink="/recipe">Recipe-Masterview</a></button>
+            </mat-card-content>
+            </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
