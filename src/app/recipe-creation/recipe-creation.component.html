@@ -1,0 +1,57 @@
+<mat-grid-list cols="4" rowHeight="1:1" >
+    <form [formGroup]="recipeForm" (submit)="submitRecipe()">
+
+        <mat-grid-tile>
+            <mat-card>
+                <mat-card-title>Name</mat-card-title>
+                <mat-card-content>
+                        <mat-form-field>
+                            <input matInput formControlName="name">
+                        </mat-form-field>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-card>
+                <mat-card-title>Ingredients</mat-card-title>
+                <mat-card-content>
+                        <mat-form-field>
+                            <mat-label>Ingredients</mat-label>
+                            <mat-select multiple formControlName="ingredients">
+                                <mat-option *ngFor="let ingredient of ingredientList" [value]="ingredient"> {{ ingredient.name }} </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-card>
+                <mat-card-title>Image-URL</mat-card-title>
+                <mat-form-field>
+                    <input matInput formControlName="image">
+                </mat-form-field>
+                <mat-card-footer>
+                    <mat-hint>Please make sure you provide an URL pointing to the desired image!</mat-hint>
+                </mat-card-footer>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-card>
+                <mat-card-title>Steps</mat-card-title>
+                <mat-form-field>
+                    <input matInput formControlName="steps">
+                </mat-form-field>
+            </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <button type="submit">Submit</button>
+        </mat-grid-tile>
+       <!-- Submit Button here  [routerLink]="['/recipe']" [disabled]="recipeForm.invalid" -->
+    </form>  
+</mat-grid-list> 
+
+

@@ -10,6 +10,7 @@ import { EntryComponent } from './entry/entry.component';
 import { HeaderComponent } from './header/header.component';
 import { IngredientDetailviewComponent } from './ingredient-detailview/ingredient-detailview.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { RecipeCreationComponent } from './recipe-creation/recipe-creation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     EntryComponent,
     HeaderComponent,
     IngredientDetailviewComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    RecipeCreationComponent
   ],
   imports: [
     BrowserModule,

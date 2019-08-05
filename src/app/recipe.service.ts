@@ -87,6 +87,13 @@ export class RecipeService {
     return of(this.recipeArray);
   }
 
+  addRecipe(inputRecipe: Recipe){
+    this.recipeArray.push(inputRecipe);
+    console.log("Added" + this.recipeArray);
+    
+  }
+
+
   getByID(id: string): Recipe{
     this.recipeArray.forEach(element => {
       if(element.id == id){
