@@ -1,3 +1,26 @@
+To Do´s:
+
+    - Recipe-Creation:
+        - inform user about recipe creation ; navigate after confirmation
+        - Form validation
+        - Image URL validation
+        - Product creation [modals?]
+
+    - Shopping Cart:
+        - Categorise by category
+        - Sum up all duplicates
+
+    - Entry Page:
+        - beautify
+    
+    - Recipe Detailview:
+        - remove duplication of recipe-array (already existing in Masterview)
+
+    - General:
+        - comments
+        - restructuring
+    
+
 # Angular-Fire-Recipe-Shopping
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.

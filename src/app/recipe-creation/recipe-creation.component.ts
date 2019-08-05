@@ -44,6 +44,7 @@ export class RecipeCreationComponent implements OnInit {
     }
 
     this.recService.addRecipe(this.rec);
+    /// to do: user-notification on recipe-creation before navigating
     this.router.navigate(['/recipe'])
   }
 
