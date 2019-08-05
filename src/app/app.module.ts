@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-material/app-material.module';
@@ -8,9 +10,9 @@ import { RecipeDetailviewComponent } from './recipe-detailview/recipe-detailview
 import { AppRoutingModule } from './app-routing.module';
 import { EntryComponent } from './entry/entry.component';
 import { HeaderComponent } from './header/header.component';
-import { IngredientDetailviewComponent } from './ingredient-detailview/ingredient-detailview.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { RecipeCreationComponent } from './recipe-creation/recipe-creation.component';
+import { IngredientCreationComponent } from './ingredient-creation/ingredient-creation.component';
 
 @NgModule({
   declarations: [
@@ -19,16 +21,20 @@ import { RecipeCreationComponent } from './recipe-creation/recipe-creation.compo
     RecipeDetailviewComponent,
     EntryComponent,
     HeaderComponent,
-    IngredientDetailviewComponent,
     ShoppingCartComponent,
     RecipeCreationComponent,
+    IngredientCreationComponent,
   ],
   imports: [
     BrowserModule,
-    AppMaterialModule,
-    AppRoutingModule, // to provide all Angular Material imports
+    AppMaterialModule, // to provide all Angular Material imports
+    AppRoutingModule, 
+    MatDialogModule
   ],
-  providers: [],
+  entryComponents: [IngredientCreationComponent],
+  providers: [
+    { provide: MatDialogModule, useValue: {} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

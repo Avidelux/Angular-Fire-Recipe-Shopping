@@ -1,9 +1,9 @@
 To Do´s:
 
     - Recipe-Creation:
-        - Image URL validation [try-catch]
-        - Form validation
+        - Image URL validation [try-catch] -- somewhat done
         - Product creation [modals?]
+        - Form validation
 
     - Shopping Cart:
         - Categorise by category

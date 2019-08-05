@@ -3,6 +3,10 @@ import { RecipeService } from '../recipe.service';
 import { Recipe } from '../recipe.model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from "@angular/router"
+import { IngredientsService } from '../ingredients.service';
+import { MatDialog } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { IngredientCreationComponent } from '../ingredient-creation/ingredient-creation.component';
 
 @Component({
   selector: 'app-recipe-creation',
@@ -15,10 +19,10 @@ export class RecipeCreationComponent implements OnInit {
   ingredientList;
   recipeForm: FormGroup;
 
-  constructor( private recService: RecipeService, private router: Router ) { }
+  constructor( private recService: RecipeService, private router: Router, private ingService: IngredientsService, private dialog: MatDialog ) { }
 
   ngOnInit() {
-    this.ingredientList = this.recService.ingredientArray;
+    this.ingredientList = this.ingService.ingredientArray;
 
     this.recipeForm = new FormGroup({
       name: new FormControl(),
@@ -27,6 +31,10 @@ export class RecipeCreationComponent implements OnInit {
       steps: new FormControl()
     });
 
+  }
+
+  openDialog(){
+    this.dialog.open(IngredientCreationComponent, {width: '35rem', height: '35rem'});
   }
 
   submitRecipe(){

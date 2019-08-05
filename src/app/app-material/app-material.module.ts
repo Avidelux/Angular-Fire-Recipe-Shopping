@@ -34,7 +34,8 @@ import { MatIconModule } from '@angular/material';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+
   ],
   exports: [
     MatButtonModule,
@@ -47,7 +48,7 @@ import { MatIconModule } from '@angular/material';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
   ]
 })
 

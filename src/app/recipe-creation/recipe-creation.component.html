@@ -22,6 +22,7 @@
                                 <mat-option *ngFor="let ingredient of ingredientList" [value]="ingredient"> {{ ingredient.name }} </mat-option>
                             </mat-select>
                         </mat-form-field>
+                        <button type="button" mat-raised-button (click)="openDialog()">Create a new ingredient</button>
                 </mat-card-content>
             </mat-card>
         </mat-grid-tile>
@@ -51,6 +52,10 @@
             <button type="submit">Submit</button>
         </mat-grid-tile>
     </form>  
+
+    <mat-grid-tile>
+        <button type="button" [routerLink]="['/recipe']">Cancel</button>
+    </mat-grid-tile>
 </mat-grid-list> 
 
 
