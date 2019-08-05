@@ -21,7 +21,7 @@ import { RecipeCreationComponent } from './recipe-creation/recipe-creation.compo
     HeaderComponent,
     IngredientDetailviewComponent,
     ShoppingCartComponent,
-    RecipeCreationComponent
+    RecipeCreationComponent,
   ],
   imports: [
     BrowserModule,

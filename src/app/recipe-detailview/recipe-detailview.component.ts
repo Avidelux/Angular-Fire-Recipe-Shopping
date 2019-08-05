@@ -28,8 +28,6 @@ export class RecipeDetailviewComponent implements OnInit {
   getID(){
     this.recipeID = this.route.snapshot.paramMap.get('id'); // grabs the ID from the URL , ---! maybe rework later when two ids are in the URL !---
       // subscribe to the url -> to do
-
-    console.log(this.recipeID);
   }
 
   addToCart() {

@@ -4,7 +4,7 @@
     <mat-grid-tile *ngFor="let recipe of recipes"> 
         <mat-card>
             <mat-card-title> {{ recipe.name }} </mat-card-title>
-            <img mat-card-image *ngIf="recipe.image!=null" [src]= recipe.image alt="placeholder">
+            <img mat-card-image *ngIf="recipe.image!=null" [src]= recipe.image (error)="recipe.image=''">
             <mat-card-actions>
                 <button mat-button [routerLink]="['/recipe', recipe.id]"><i class="material-icons">pageview</i> Check out this recipe! </button>
             </mat-card-actions>

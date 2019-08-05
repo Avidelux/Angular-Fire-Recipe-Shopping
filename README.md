@@ -1,9 +1,8 @@
 To Do´s:
 
     - Recipe-Creation:
-        - inform user about recipe creation ; navigate after confirmation
+        - Image URL validation [try-catch]
         - Form validation
-        - Image URL validation
         - Product creation [modals?]
 
     - Shopping Cart:

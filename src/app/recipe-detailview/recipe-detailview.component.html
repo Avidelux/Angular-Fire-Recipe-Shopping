@@ -14,7 +14,7 @@
 
     <mat-grid-tile rowspan="2">
         <mat-card>
-            <img mat-card-image *ngIf="reci.image!=null" [src]= reci.image alt="placeholder">
+            <img mat-card-image *ngIf="reci.image!=null" [src]= reci.image (error)="reci.image=''">
         </mat-card>
     </mat-grid-tile>
 
