@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IngredientsService } from '../ingredients.service';
 import { Ingredient } from '../ingredient.model';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-ingredient-creation',
@@ -14,7 +15,7 @@ export class IngredientCreationComponent implements OnInit {
   ingForm: FormGroup;
   ing: Ingredient;
 
-  constructor( private ingService: IngredientsService ) { }
+  constructor( private ingService: IngredientsService, private dialogRef:MatDialogRef<IngredientCreationComponent> ) { }
     
   ngOnInit() {
     this.categories = this.ingService.categories;
@@ -30,8 +31,7 @@ export class IngredientCreationComponent implements OnInit {
       category: this.ingForm.get('category').value
     }
     this.ingService.addIngredient(this.ing);
-    console.log("Success");
-    
+    this.dialogRef.close(); //close dialog window after submittion
   }
 
 
