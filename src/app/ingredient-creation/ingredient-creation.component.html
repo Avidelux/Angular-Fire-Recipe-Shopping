@@ -1,4 +1,4 @@
-<p>ingredient-creation works!</p>
+
 <mat-grid-list cols="2" rowHeight="1:1" >
     <form [formGroup]="ingForm" (submit)="submitIng()">
 
@@ -26,6 +26,32 @@
                 </mat-card-content>
             </mat-card>
         </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-card>
+                <mat-card-title>Unit</mat-card-title>
+                <mat-card-content>
+                    <mat-form-field>
+                        <mat-label>Unit</mat-label>
+                        <mat-select formControlName="unit">
+                            <mat-option *ngFor="let un of units" [value]="un"> {{ un }} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <mat-card>
+                <mat-card-title>Amount</mat-card-title>
+                <mat-card-content>
+                        <mat-form-field>
+                            <input type="number" matInput formControlName="amount">
+                        </mat-form-field>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+
 
         <mat-grid-tile>
             <button type="submit">Submit</button>

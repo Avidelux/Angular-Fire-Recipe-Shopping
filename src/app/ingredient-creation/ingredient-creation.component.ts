@@ -12,23 +12,32 @@ import { MatDialogRef } from '@angular/material';
 export class IngredientCreationComponent implements OnInit {
 
   categories;
+  units;
   ingForm: FormGroup;
   ing: Ingredient;
 
   constructor( private ingService: IngredientsService, private dialogRef:MatDialogRef<IngredientCreationComponent> ) { }
     
   ngOnInit() {
+
     this.categories = this.ingService.categories;
+    this.units = this.ingService.units;
+    
     this.ingForm = new FormGroup({
       name: new FormControl(),
       category: new FormControl(),
+      unit: new FormControl(),
+      amount: new FormControl(),
     });
+    
   }
   
   submitIng(){
     this.ing = {
       name: this.ingForm.get('name').value,
-      category: this.ingForm.get('category').value
+      category: this.ingForm.get('category').value,
+      unit: this.ingForm.get('unit').value,
+      amount: this.ingForm.get('amount').value
     }
     this.ingService.addIngredient(this.ing);
     this.dialogRef.close(); //close dialog window after submittion

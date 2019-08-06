@@ -1,4 +1,8 @@
 <p>shopping-cart works!</p>
-<ul *ngFor="let item of items">
-    <li> {{ item.name }} || {{ item.category }} </li>
+
+<ul *ngFor="let cat of categories">
+        <li>{{cat}}</li>
+        <ul *ngFor="let item of distinctItems" >
+                <li *ngIf="item.category == cat"> {{ item.name }} || {{ item.category }} || {{ item.unit }} || {{ item.amount }}</li>
+        </ul>
 </ul>

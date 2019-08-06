@@ -6,7 +6,10 @@
             <mat-card-title>Zutaten</mat-card-title>
             <mat-card-content>
                 <ul *ngFor="let pro of reci.products">
-                    <li>{{ pro.name }} | {{ pro.category }}</li>
+                    <li>Name: {{ pro.name }}</li>
+                    <li>Category: {{ pro.category }}</li>
+                    <li>Unit: {{ pro.unit }}</li>
+                    <li>Amount: {{ pro.amount }}</li>
                 </ul>
             </mat-card-content>
         </mat-card>    

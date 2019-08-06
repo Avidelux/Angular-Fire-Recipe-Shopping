@@ -23,7 +23,6 @@ export class RecipeCreationComponent implements OnInit {
 
   ngOnInit() {
     this.ingredientList = this.ingService.ingredientArray;
-
     this.recipeForm = new FormGroup({
       name: new FormControl(),
       ingredients: new FormControl(),
@@ -37,9 +36,7 @@ export class RecipeCreationComponent implements OnInit {
     this.dialog.open(IngredientCreationComponent, {width: '35rem', height: '35rem'});
   }
 
-  submitRecipe(){
-    console.log(this.recipeForm.value);
-    
+  submitRecipe(){ 
     this.rec = {
       id: (this.recService.recipeArray.length+1).toString(),
       name: this.recipeForm.get('name').value,
@@ -47,7 +44,6 @@ export class RecipeCreationComponent implements OnInit {
       image: this.recipeForm.get('image').value,
       steps: [this.recipeForm.get('steps').value]
     }
-
     this.recService.addRecipe(this.rec);
     alert("Recipe has been created"); // Alert user that recipe has been created
     this.router.navigate(['/recipe']) // Navigate back to recipe-masterview, once the recipe has been created

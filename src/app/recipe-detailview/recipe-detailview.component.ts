@@ -34,7 +34,6 @@ export class RecipeDetailviewComponent implements OnInit {
     this.reci.products.forEach(element => {
       this.cartService.addItem(element);
     });
-   
   }
 
 

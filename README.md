@@ -3,10 +3,7 @@ To Do´s:
     - Recipe-Creation:
         - Image URL validation [try-catch] -- somewhat done
         - Form validation
-
-    - Shopping Cart:
-        - Categorise by category
-        - Sum up all duplicates
+        - Steps -> rework
 
     - Entry Page:
         - beautify

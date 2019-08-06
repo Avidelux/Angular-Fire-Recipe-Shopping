@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../shopping-cart.service';
+import { IngredientsService } from '../ingredients.service';
+import { Ingredient } from '../ingredient.model';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -9,21 +11,40 @@ import { ShoppingCartService } from '../shopping-cart.service';
 export class ShoppingCartComponent implements OnInit {
 
   items;
+  categories;
+  distinctItems = [];
+  ing:Ingredient;
 
-  constructor( private cartService : ShoppingCartService ) { }
+
+  constructor( private cartService : ShoppingCartService, private ingService: IngredientsService ) {  }
 
   ngOnInit() {
     this.items = this.cartService.getItems();
-    
-/*  let breadCat = this.items[0];
-    let wineCat = this.items[1];
-    let vegetablesCat = this.items[2];
-    let fishCat = this.items[3];
-    let meatCat = this.items[4];
-    let otherCat = this.items[5]; */
+    this.categories = this.ingService.categories;
+    console.log(this.items);
+    this.createDistinct();
+  }
+
+  createDistinct(){
+    this.distinctItems = [];
+    /// create a new object array for each distinct value of items AND an increasing amount assigned to each entry which will increase per "duplicate" in items
+    if(this.items != null){
+      this.items.forEach(element => {
+        if (this.distinctItems.some(e => (e.name === element.name)&&(e.category === element.category)&&(e.unit === element.unit) ) ) {
+          /* distinctItems contains the element "e" looked for */
+          var index = this.distinctItems.findIndex(e => (e.name === element.name)&&(e.category === element.category)&&(e.unit === element.unit) )
+          this.distinctItems[index].amount += element.amount;
+        }else{
+          this.ing = new Ingredient();
+          this.ing.name = element.name;
+          this.ing.category = element.category;
+          this.ing.unit = element.unit;
+          this.ing.amount = element.amount;
+          this.distinctItems.push(this.ing);
+        }
+      });
+    }
   }
 
   
-
-
 }
