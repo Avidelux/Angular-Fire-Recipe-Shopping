@@ -1,13 +1,13 @@
 
 <mat-grid-list cols="4" rowHeight="1:1" >
-    <mat-grid-tile-header> <p>Check out these recipes!</p> </mat-grid-tile-header>
+    <mat-grid-tile-header> <p>Check these fabulous recipes!</p> </mat-grid-tile-header>
     <mat-grid-tile *ngFor="let recipe of recipes"> 
         <mat-card>
             <mat-card-title> {{ recipe.name }} </mat-card-title>
-            <img mat-card-image *ngIf="recipe.image!=null" [src]= recipe.image (error)="recipe.image=''">
+            <img mat-card-image *ngIf="recipe.image!=null" [src]= recipe.image (error)="recipe.image='https://via.placeholder.com/450?text=Placeholder+Image'">
             <mat-card-actions>
-                <button mat-button [routerLink]="['/recipe', recipe.id]"><i class="material-icons">pageview</i> Check out this recipe! </button>
-                <button mat-button (click)="addToCart(recipe)"><i class="material-icons">add_shopping_cart</i></button>
+                <button mat-raised-button [routerLink]="['/recipe', recipe.id]"><i class="material-icons">pageview</i> Check out this recipe! </button>
+                <button mat-raised-button (click)="addToCart(recipe)"><i class="material-icons">add_shopping_cart</i></button>
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>
@@ -15,7 +15,7 @@
         <mat-card>
             <mat-card-title>Add a new recipe</mat-card-title>
             <mat-card-actions>
-                <button mat-button [routerLink]="['/create']">Create a new recipe <i class="material-icons">add_circle</i></button>
+                <button mat-raised-button [routerLink]="['/create']">Create a new recipe <i class="material-icons">add_circle</i></button>
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>

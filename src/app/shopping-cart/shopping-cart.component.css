@@ -1,0 +1,28 @@
+mat-grid-tile-header{
+
+    margin-top: 0.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+    background-color: #E3DCC2;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    /*Border styling for different browsers*/
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #000000;
+}
+
+mat-card{
+    background-color: burlywood;
+    height: 80%;
+    width: 85%;
+}

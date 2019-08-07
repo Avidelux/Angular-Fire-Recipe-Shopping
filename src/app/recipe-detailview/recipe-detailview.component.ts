@@ -21,7 +21,9 @@ export class RecipeDetailviewComponent implements OnInit {
     this.getID();
     this.recService.getRecipes().subscribe(element => this.recipe = element); //get observable from recipe-service
     this.reci = this.recipe[(this.recipeID-1)]; //pulls out just the recipe that is needed 
-    
+    if(this.reci.image === null){
+      this.reci.image = 'https://via.placeholder.com/650?text=No+image+has+been+defined';
+    }
     /// to-do: redundancy of recipe[] with recipe-masterview, fix!
   }
 
@@ -34,27 +36,6 @@ export class RecipeDetailviewComponent implements OnInit {
     this.reci.products.forEach(element => {
       this.cartService.addItem(element);
     });
-  }
-
-
-
-
-
-  getRecipeFromService(){
-    
-    
-    /*
-    if(this.recipeID != null){
-      console.log(this.service.getByID(this.recipeID));
-      var returnValue = this.service.getByID(this.recipeID);
-      console.log(returnValue);
-      
-      this.recipe.name = returnValue.name;
-    }else{ // recipeID == null ; launch getID() again to recieve, then same method again
-      this.getID();
-      setTimeout( () => { this.getRecipeFromService() }, 2000); // wait 2 seconds before trying again
-    }
-    */
   }
 
 }

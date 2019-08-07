@@ -6,10 +6,7 @@
             <mat-card-title>Zutaten</mat-card-title>
             <mat-card-content>
                 <ul *ngFor="let pro of reci.products">
-                    <li>Name: {{ pro.name }}</li>
-                    <li>Category: {{ pro.category }}</li>
-                    <li>Unit: {{ pro.unit }}</li>
-                    <li>Amount: {{ pro.amount }}</li>
+                    <li> {{ pro.amount }} {{ pro.unit }} of {{ pro.name }} </li>
                 </ul>
             </mat-card-content>
         </mat-card>    
@@ -17,7 +14,9 @@
 
     <mat-grid-tile rowspan="2">
         <mat-card>
-            <img mat-card-image *ngIf="reci.image!=null" [src]= reci.image (error)="reci.image=''">
+            <mat-card-content>
+                <img mat-card-image *ngIf="reci.image!=null" [src]= reci.image (error)="reci.image='https://via.placeholder.com/450?text=Placeholder+Image'">
+            </mat-card-content>
         </mat-card>
     </mat-grid-tile>
 
@@ -31,13 +30,13 @@
             </mat-card-content>
         </mat-card>    
     </mat-grid-tile>
-    
-    <mat-grid-tile>
-            <button mat-button [routerLink]="['/recipe']"> <i class="material-icons">keyboard_backspace</i> To the recipe-masterview </button>
-    </mat-grid-tile>
 
-    <mat-grid-tile>
-        <button mat-button (click)="addToCart()"><i class="material-icons">add_shopping_cart</i> Add Recipe-Ingredients to the shopping cart </button>  
+    <mat-grid-tile colspan="2">
+            <button mat-raised-button [routerLink]="['/recipe']"> <i class="material-icons">keyboard_backspace</i> To the recipe-masterview </button>
+            <div></div>
+            <button mat-raised-button (click)="addToCart()"><i class="material-icons">add_shopping_cart</i> Add Recipe-Ingredients to the shopping cart </button>  
     </mat-grid-tile>
+    
+
 
 </mat-grid-list>

@@ -16,6 +16,11 @@ export class RecipeMasterviewComponent implements OnInit {
 
   ngOnInit() {
     this.service.getRecipes().subscribe(element => this.recipes = element);
+    this.recipes.forEach(element => {
+      if(element.image === null){
+        element.image = 'https://via.placeholder.com/650?text=No+image+has+been+defined';
+      }
+    });
   }
 
   addRecipe(rec: Recipe){

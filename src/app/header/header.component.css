@@ -1,7 +1,16 @@
 mat-toolbar{
-    background-color: greenyellow;
+    background-color: #A6A867;
+    margin: auto;
+    width: 100%;
+    text-align: center;
 }
-#home-area{
-    padding-left: 3rem;
-    text-align: right;
+.fill-remaining-space{
+    flex: 1 1 auto;
+}
+button{
+    background-color: #909083;
+    font-weight: bold;
+}
+span{
+    font-weight: bold;
 }

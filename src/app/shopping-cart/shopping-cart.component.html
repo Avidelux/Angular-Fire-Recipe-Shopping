@@ -1,8 +1,14 @@
-<p>shopping-cart works!</p>
+<mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile-header> <p>Your shopping cart: </p> </mat-grid-tile-header>
+        <mat-grid-tile *ngFor="let cat of categories">
+                <mat-card>
+                        <mat-card-title><strong>"{{cat}}"</strong>-ingredients:</mat-card-title>
+                        <mat-card-content>
+                                <ul *ngFor="let item of distinctItems" >
+                                        <li *ngIf="item.category == cat"> {{ item.amount }} {{ item.unit }} of {{ item.name }} </li>
+                                </ul>
+                        </mat-card-content>
+                </mat-card> 
 
-<ul *ngFor="let cat of categories">
-        <li>{{cat}}</li>
-        <ul *ngFor="let item of distinctItems" >
-                <li *ngIf="item.category == cat"> {{ item.name }} || {{ item.category }} || {{ item.unit }} || {{ item.amount }}</li>
-        </ul>
-</ul>
+        </mat-grid-tile>
+</mat-grid-list>

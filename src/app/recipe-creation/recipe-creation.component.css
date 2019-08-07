@@ -2,3 +2,7 @@ mat-hint{
     font-size: 0.75rem;
     color: gray;
 }
+.coloredButton{
+    background-color: #888A55;
+    font-weight: bold;
+}
