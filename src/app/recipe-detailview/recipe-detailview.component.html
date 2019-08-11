@@ -13,11 +13,9 @@
     </mat-grid-tile>
 
     <mat-grid-tile rowspan="2">
-        <mat-card>
-            <mat-card-content>
-                <img mat-card-image *ngIf="reci.image!=null" [src]= reci.image (error)="reci.image='https://via.placeholder.com/450?text=Placeholder+Image'">
-            </mat-card-content>
-        </mat-card>
+        <div id="imageContainer">
+            <img *ngIf="reci.image!=null" [src]= reci.image (error)="reci.image='https://via.placeholder.com/600x450?text=Placeholder+Image'">
+        </div>
     </mat-grid-tile>
 
     <mat-grid-tile>

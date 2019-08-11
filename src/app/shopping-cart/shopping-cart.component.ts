@@ -20,7 +20,7 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit() {
     this.items = this.cartService.getItems();
-    this.categories = this.ingService.categories;
+    this.categories = this.ingService.categories; // grabs the categories to display each ingredient according to the categories
     console.log(this.items);
     this.createDistinct();
   }
@@ -34,7 +34,7 @@ export class ShoppingCartComponent implements OnInit {
           /* distinctItems contains the element "e" looked for */
           var index = this.distinctItems.findIndex(e => (e.name === element.name)&&(e.category === element.category)&&(e.unit === element.unit) )
           this.distinctItems[index].amount += element.amount;
-        }else{
+        }else{ // create a new ingredient with similar attributes to avoid "call-by-reference"
           this.ing = new Ingredient();
           this.ing.name = element.name;
           this.ing.category = element.category;

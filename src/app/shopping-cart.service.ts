@@ -12,10 +12,9 @@ export class ShoppingCartService {
   items = [];
 
 
-  addItem(ingredient) {
+  addItem(ingredient) { // adds a new ingredient to the shopping-cart
     this.items.push(ingredient);
     console.log("Added");
-        
   }
 
   getItems() {
@@ -29,6 +28,8 @@ export class ShoppingCartService {
     this.items = [];
     return this.items;
   }
+
+/// Sorting algorithm, no longer needed for now
 /* 
   compare( a, b ) { // compare the category of each ingredient in the shopping cart to sort it
     if ( a.category < b.category ){

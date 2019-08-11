@@ -1,19 +1,8 @@
-To Do´s:
 
-    - Recipe-Creation:
-        - Image URL validation [try-catch] -- somewhat done
-        - Form validation
-        - Steps -> rework
-
-    - Entry Page:
-        - beautify
-    
-    - Recipe Detailview:
-        - remove duplication of recipe-array (already existing in Masterview)
-
-    - General:
-        - comments
-        - restructuring
+Future things to add and improve:
+    - BUG: Placeholder-Images are only displayed correctly after page-reload, which is most likely caused by Angular (see issue raised here: https://github.com/angular/angular/issues/7845)
+    - FEATURE: Adding a firebase-database instead of relying on local, predefined arrays
+    - FEATURE: Making the input-field for "Steps" the recipe-creation-form dynamic, so it is possible to directly add each step on its own
     
 
 # Angular-Fire-Recipe-Shopping

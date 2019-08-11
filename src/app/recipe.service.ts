@@ -10,7 +10,7 @@ export class RecipeService {
   
   constructor( private ingService: IngredientsService ) { }
 
-  recipeArray = [ 
+  recipeArray = [ // mock-data of recipes
     { 
       id:'1', 
       name: 'recipe1', 
@@ -49,7 +49,7 @@ export class RecipeService {
     { 
       id:'5', 
       name: 'recipe5', 
-      image: 'https://sweetcsdesigns.com/wp-content/uploads/2018/12/Easy-Jumbo-Blueberry-Muffins-Recipe-Picture.jpg', 
+      image: 'https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/1537826115/lemony-greek-chicken-soup-1811-p16.jpg?itok=H9Vjmwxd', 
       products: [ this.ingService.ingredientArray[4], this.ingService.ingredientArray[0] ],
       steps: [
         "Zutaten schälen und Säuber", "Die Paprika bei 250° köcheln lassen", "Nach ca. 10 Minuten können Sie das Angebrante vom Herd entfernen", "Rufen Sie ca. 20 Minuten nach Beginn den Lieferservice an und bestellen sich eine Pizza", "Je nach Lieferservice sollte nach 20-30 Minuten ihre Bestellung angekommen sein. Nun nur noch schön anrichten und genießen!"
@@ -74,25 +74,12 @@ export class RecipeService {
   ];
 
   getRecipes(): Observable<Recipe[]>{
-    return of(this.recipeArray);
+    return of(this.recipeArray); // returns an observable 
   }
 
-  addRecipe(inputRecipe: Recipe){
+  addRecipe(inputRecipe: Recipe){ // adds a new recipe
     this.recipeArray.push(inputRecipe);
     console.log("Added" + this.recipeArray);
-  }
-
-
-  getByID(id: string): Recipe{
-    this.recipeArray.forEach(element => {
-      if(element.id == id){
-        console.log(element.id);
-        console.log(element);
-        
-        return element as Recipe;
-      }
-    });
-    return null;
   }
 
 }

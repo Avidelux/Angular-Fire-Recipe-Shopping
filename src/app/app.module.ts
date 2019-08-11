@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog'; //somehow needs to be imported and declared here instead of in the app-material-module
 
 
 import { AppComponent } from './app.component';

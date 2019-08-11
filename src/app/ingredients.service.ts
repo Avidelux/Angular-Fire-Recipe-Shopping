@@ -11,9 +11,9 @@ export class IngredientsService {
 
   categories =['bread', 'wine', 'vegetables', 'fish', 'meat', 'other']; // categories are pre-defined and do not change!
 
-  units = ['gramm', 'liter', 'bottle'];
+  units = ['gramm', 'liter', 'bottle']; // units are pre-defined
 
-  ingredientArray = [ 
+  ingredientArray = [ // mock-data of ingredients
     {name:'ingredient bread another', category: this.categories[0], unit: this.units[0], amount: 5},
     {name:'ingredient wine', category: this.categories[1], unit: this.units[2], amount: 6},
     {name:'ingredient veggies', category: this.categories[2], unit: this.units[1], amount: 1},
@@ -22,7 +22,7 @@ export class IngredientsService {
     {name:'ingredient bread', category: this.categories[0], unit: this.units[0], amount: 25},
   ];
 
-  addIngredient(ing: Ingredient){
+  addIngredient(ing: Ingredient){ // adds a new ingredient
     this.ingredientArray.push(ing);
   }
 
